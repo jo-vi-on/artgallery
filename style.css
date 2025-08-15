@@ -1,0 +1,32 @@
+:root { --accent: #6c5ce7; }
+body { font-family: 'Poppins', sans-serif; }
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp .7s ease-out forwards;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card { transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 1rem 2rem rgba(0,0,0,.15); }
+
+.btn-accent { background: var(--accent); border: none; color: white; }
+.btn-accent:hover { filter: brightness(0.95); }
+
+.hero {
+  background: radial-gradient(1200px 400px at 10% 10%, rgba(108,92,231,.2), transparent),
+              linear-gradient(135deg, #0d1117 0%, #1f2937 100%);
+  color: #e5e7eb;
+}
+.hero h1 span {
+  background: linear-gradient(90deg, #a78bfa, #34d399);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.thumb { object-fit: cover; height: 220px; }
+.art-hero { max-height: 60vh; object-fit: cover; border-radius: 1rem; }
